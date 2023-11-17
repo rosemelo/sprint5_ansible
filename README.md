@@ -31,8 +31,10 @@ C:\terraform
     ```bash
     terraform
     ```
+
 ## Configurando a CLI da AWS
-    ```bash
+
+    ```
     aws configure
     ```
 
@@ -54,15 +56,12 @@ Obs.: Eu abri o arquvo no VS Code com o comando:
     }
     ```
 
+Obs.: Salve o arquivo antes de fechar o VsCode  
 - E testei o deploy da EC2 pela linha de comando:
 
     ```bash
     terraform init
-    
-    ```bash
     terraform plan
-    ```
-    ```bash
     terraform apply
     ```
     

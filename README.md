@@ -24,33 +24,47 @@ C:\terraform
 - Vá clicando em *Ok* até fechar todas as telas
 ## Validando a configuração do Terraform
 - Verificando a versão no powershell:
-'''
-terraform –version
-'''
+    '''
+    terraform –version
+    '''
 - Verificando os comandos disponíveis:
-'''
-terraform
-'''
+    ```bash
+    terraform
+    ```
 ## Configurando a CLI da AWS
-
- aws configure
+    ```bash
+    aws configure
+    ```
 
 - Vamos também configurar o arquivo *main.tf*
 Obs.: Eu abri o arquvo no VS Code com o comando:
- code main.tf
-
+    ```bash
+    code main.tf
+    ```
 - E inseri as configurações:
 
-provider "aws" {
-    region = "sua_regiao_aws"
-}
+    ```bash
+    provider "aws" {
+        region = "sua_regiao_aws"
+    }
 
-resource "aws_instance" "ec2_instance" {
-  ami           = "ami-0c55b159cbfafe1f0" 
-  instance_type = "t2.micro"
-}
+    resource "aws_instance" "ec2_instance" {
+    ami           = "ami-0c55b159cbfafe1f0" 
+    instance_type = "t2.micro"
+    }
+    ```
 
 - E testei o deploy da EC2 pela linha de comando:
+
+    ```bash
     terraform init
+    
+    ```bash
     terraform plan
+    ```
+    ```bash
     terraform apply
+    ```
+    
+    
+    
